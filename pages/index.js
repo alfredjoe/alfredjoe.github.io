@@ -35,7 +35,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+//export default Home;
 const Home = () => {
   return (
     <div className="root">
