@@ -1,8 +1,14 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
 
 const Home = () => {
+  const [userInput, setUserInput] const onUserChangedText = (event) => {
+  console.log(event.target.value);
+  setUserInput(event.target.value);
+};
+= useState('');
   return (
     <div className="root">
       <div className="container">
@@ -16,9 +22,20 @@ const Home = () => {
         </div>
         {/* Add this code here*/}
         <div className="prompt-container">
-          <textarea placeholder="start typing here" className="prompt-box" />
-        </div>
+         <textarea
+  className="prompt-box"
+  placeholder="start typing here"
+  value={userInput}
+  onChange={onUserChangedText}
+/>;<div className="prompt-buttons">
+    <a className="generate-button" onClick={null}>
+      <div className="generate">
+        <p>Generate</p>
       </div>
+    </a>
+  </div>
+</div>
+          
       <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-writer"
